@@ -11,8 +11,14 @@ public class BaseCounter : MonoBehaviour, IKitchenObjectParent
 
     private KitchenObject kitchenObject;
 
+    public static void ResetStaticData()
+    {
+        OnAnyObjectPlacedHere = null;
+    }
 
-    public virtual void Interact(Player player) {
+
+    public virtual void Interact(Player player)
+    {
         Debug.LogError("BaseCounter.Interact();");
     }
     public virtual void InteractAlternate(Player player) {
